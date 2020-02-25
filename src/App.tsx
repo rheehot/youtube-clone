@@ -2,6 +2,9 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 
 import youtube from './api/youtube';
+import SearchBar from './components/SearchBar'
+import VideoList from './components/VideoList';
+import VideoDetail from './components/VideoDetail';
 
 const App: React.FC = () => {
   return (
@@ -9,13 +12,13 @@ const App: React.FC = () => {
       <Grid item xs={8}>
         <Grid container spacing={10}>
           <Grid item xs={8}>
-            {/* SEARCH BAR */}
+            <SearchBar />
           </Grid>
           <Grid item xs={6}>
-            {/* VIDEO DETAILS */}
+            <VideoList />
           </Grid>
           <Grid item xs={4}>
-            {/* VIDEO LIST */}
+            <VideoDetail />
           </Grid>
         </Grid>
       </Grid>
