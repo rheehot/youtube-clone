@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Grid } from '@material-ui/core';
 
-function App() {
+import youtube from './api/youtube';
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid justify="center" container spacing={10}>
+      <Grid item xs={8}>
+        <Grid container spacing={10}>
+          <Grid item xs={8}>
+            {/* SEARCH BAR */}
+          </Grid>
+          <Grid item xs={6}>
+            {/* VIDEO DETAILS */}
+          </Grid>
+          <Grid item xs={4}>
+            {/* VIDEO LIST */}
+          </Grid>
+        </Grid>
+      </Grid>
+
+    </Grid>
   );
 }
 
