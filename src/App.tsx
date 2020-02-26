@@ -5,30 +5,21 @@ import youtube from './api/youtube';
 import { SearchBar, VideoList, VideoDetail } from './components'
 
 const App: React.FC = () => {
-  const [video, setVideo] = useState([]);
-  const [selectedVideo, setSelectedVideo] = useState({});
+  const [videos, setVideos] = useState<Object[]>([]);
+  const [selectedVideo, setSelectedVideo] = useState<Object>();
 
   const handleSubmit = async (searchTerm: string) => {
     const response = await youtube.get('search', {
       params: {
         part: 'snippet',
         maxResults: 5,
-        key: '', /* TODO: put in YOUTUBE API KEY */
+        key: 'AIzaSyAY7kDFaVbdzAyIfaR6ck95tgshjf8wPzs', /* TODO: put in YOUTUBE API KEY */
         q: searchTerm,
       }
     });
 
-
-    /* setState가 안되는 버그 있음. */
-
-    console.log(response.data.items);
-
-    // setVideo(response.data.items);
+    setVideos([response.data.items]);
     setSelectedVideo(response.data.items[0]);
-
-    console.log(video);
-    console.log(selectedVideo);
-    
   }
 
   return (
@@ -39,10 +30,10 @@ const App: React.FC = () => {
             <SearchBar onFormSubmit={handleSubmit} />
           </Grid>
           <Grid item xs={8}>
-            <VideoList />
+            <VideoDetail video={selectedVideo}/>
           </Grid>
           <Grid item xs={4}>
-            <VideoDetail />
+            <VideoList />
           </Grid>
         </Grid>
       </Grid>
