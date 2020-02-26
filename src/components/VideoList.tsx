@@ -1,12 +1,20 @@
 import React from 'react';
 
-interface VideoListlProps {
+import VideoItem from './VideoItem';
+import { Grid } from '@material-ui/core';
 
+interface VideoListlProps {
+  videos: any;
+  onVideoSelect(): void;
 }
 
-const VideoList: React.FC<VideoListlProps> = () => {
+const VideoList: React.FC<VideoListlProps> = ({ videos, onVideoSelect }) => {
+  const listOfVideos = videos.map((video: any, id: any) => <VideoItem onVideoSelect={onVideoSelect} key={id} video={video} />);
+
   return (
-    <div>This is component</div>
+    <Grid container spacing={10}>
+      {listOfVideos}
+    </Grid>
   );
 }
 

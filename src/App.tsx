@@ -17,9 +17,13 @@ const App: React.FC = () => {
         q: searchTerm,
       }
     });
-
-    setVideos([response.data.items]);
+    
+    setVideos(response.data.items);
     setSelectedVideo(response.data.items[0]);
+  }
+
+  const onVideoSelect = (video: any) => {
+    setSelectedVideo(video);
   }
 
   return (
@@ -33,11 +37,10 @@ const App: React.FC = () => {
             <VideoDetail video={selectedVideo}/>
           </Grid>
           <Grid item xs={4}>
-            <VideoList />
+            <VideoList videos={videos} onVideoSelect={onVideoSelect} />
           </Grid>
         </Grid>
       </Grid>
-
     </Grid>
   );
 }
