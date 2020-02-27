@@ -6,6 +6,7 @@
 
 <div align="center">
   <img src="./docs/mainImg.gif" alt="Main Img"  />
-  <blockquote>Hello, this is clone coding Youtube.</blockquote>
-  <blockquote>Usage: TypeScript + React.js</blockquote>
+  <blockquote>Hello, this is clone coding Youtube.
+  <br>Usage: TypeScript + React.js
+  </blockquote>
 </div>
