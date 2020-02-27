@@ -1,1 +1,11 @@
-Youtube
+[![Typed with TypeScript](https://badgen.net/badge/icon/Typed?icon=typescript&label&labelColor=555555&color=blue)](https://github.com/microsoft/TypeScript)
+
+<h1 align="center">
+  Youtube Clone
+</h1>
+
+<div align="center">
+  <img src="./docs/mainImg.gif" alt="Main Img"  />
+  <blockquote>Hello, this is clone coding Youtube.</blockquote>
+  <blockquote>Usage: TypeScript + React.js</blockquote>
+</div>
