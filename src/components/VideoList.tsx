@@ -5,7 +5,7 @@ import { Grid } from '@material-ui/core';
 
 interface VideoListlProps {
   videos: any;
-  onVideoSelect(): void;
+  onVideoSelect(video: Object): void;
 }
 
 const VideoList: React.FC<VideoListlProps> = ({ videos, onVideoSelect }) => {

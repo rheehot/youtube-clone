@@ -22,7 +22,7 @@ const App: React.FC = () => {
     setSelectedVideo(response.data.items[0]);
   }
 
-  const onVideoSelect = (video: any) => {
+  const onVideoSelect = (video: Object) => {
     setSelectedVideo(video);
   }
 
